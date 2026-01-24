@@ -1,46 +1,121 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
-  text-align: center;
-  padding: 20px;
-  background: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(90deg,#ff3c6e,#ff7f50);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #fff;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  gap: 20px;
+header nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: #ffdd57;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px 50px 20px;
+  background: linear-gradient(180deg,#222,#111);
+}
+
+.hero h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ff3c6e;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+  margin: 40px 0 20px 50px;
+  color: #ff3c6e;
+}
+
+/* Comic Grid */
+.comic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 25px;
+  padding: 0 50px 50px 50px;
 }
 
 .comic-card {
-  width: 200px;
-  background: #fff;
-  border-radius: 8px;
+  background: #1a1a1a;
+  border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
 .comic-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255,60,110,0.4);
 }
 
 .comic-card img {
   width: 100%;
   display: block;
+  transition: transform 0.3s;
+}
+
+.comic-card:hover img {
+  transform: scale(1.05);
 }
 
 .comic-card h3 {
+  padding: 15px;
   text-align: center;
-  padding: 10px;
-  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  color: #ff3c6e;
+  font-weight: 700;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #222;
+  color: #aaa;
+  font-size: 0.9rem;
+}
