@@ -1,78 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WebVerse</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebVerse Comics</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<header class="navbar">
-  <div class="logo" onclick="goHome()">WEBVERSE</div>
-  <nav>
-    <a onclick="goHome()">Home</a>
-    <a onclick="goHome()">Comics</a>
-  </nav>
+<header>
+  <h1>WebVerse Comics</h1>
 </header>
+<main id="comic-list"></main>
 
-<!-- HOME -->
-<section id="home" class="page active">
-
-  <div class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Read Powerful Webtoons</h1>
-      <p>Superheroes • War • Action</p>
-      <button onclick="scrollToComics()">Browse Comics</button>
-    </div>
-  </div>
-
-  <h2 class="section-title">Featured Series</h2>
-
-  <div class="series-grid">
-    <div class="series-card" onclick="openSeries('strongest')">
-      <img src="REPLACE_IMAGE_1.jpg">
-      <div class="series-info">
-        <h3>I'm The Strongest One</h3>
-        <span>Superhero • Action</span>
-      </div>
-    </div>
-
-    <div class="series-card" onclick="openSeries('war')">
-      <img src="REPLACE_IMAGE_2.jpg">
-      <div class="series-info">
-        <h3>War for Eternity</h3>
-        <span>Action • Crime</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERIES -->
-<section id="series" class="page">
-  <button class="back" onclick="goHome()">← Back</button>
-  <h2 id="seriesTitle"></h2>
-  <p id="seriesGenre"></p>
-
-  <div class="chapter-list">
-    <button onclick="openChapter(1)">Chapter 1</button>
-    <button onclick="openChapter(2)">Chapter 2</button>
-    <button onclick="openChapter(3)">Chapter 3</button>
-  </div>
-</section>
-
-<!-- READER -->
-<section id="reader" class="page">
-  <button class="back" onclick="goSeries()">← Back</button>
-  <h2 id="chapterTitle"></h2>
-
-  <div class="reader">
-    <div class="panel">PAGE 1</div>
-    <div class="panel">PAGE 2</div>
-    <div class="panel">PAGE 3</div>
-  </div>
-</section>
-
+<script src="js/main.js"></script>
 </body>
 </html>
-
