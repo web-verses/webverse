@@ -1,162 +1,45 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
 body {
-  background: #0b0b0b;
-  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
-  background: #0f0f0f;
-  border-bottom: 1px solid #1f1f1f;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.navbar nav a {
-  margin-left: 20px;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.page {
-  display: none;
-}
-
-.page.active {
-  display: block;
-}
-
-/* HERO */
-.hero {
-  position: relative;
-  height: 75vh;
-  background: url("REPLACE_HOME_IMAGE.jpg") center/cover no-repeat;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), #0b0b0b);
-}
-
-.hero-content {
-  position: absolute;
-  bottom: 80px;
-  left: 40px;
-}
-
-.hero-content h1 {
-  font-size: 48px;
-}
-
-.hero-content p {
-  margin: 10px 0 20px;
-  color: #ccc;
-}
-
-.hero-content button {
-  padding: 12px 20px;
-  background: #ff2c2c;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/* COMICS */
-.section-title {
-  margin: 40px 30px 20px;
-  font-size: 24px;
-}
-
-.series-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
-  padding: 0 30px 50px;
-}
-
-.series-card {
-  background: #141414;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.series-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
-
-.series-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.series-info {
-  padding: 12px;
-}
-
-.series-info span {
-  color: #aaa;
-  font-size: 14px;
-}
-
-/* SERIES PAGE */
-.back {
-  background: none;
-  border: none;
-  color: #aaa;
-  margin: 20px;
-  cursor: pointer;
-}
-
-.chapter-list {
+header {
+  text-align: center;
   padding: 20px;
+  background: #222;
+  color: #fff;
 }
 
-.chapter-list button {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 14px;
-  background: #1c1c1c;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-/* READER */
-.reader {
-  padding: 20px;
+main {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
   gap: 20px;
 }
 
-.panel {
-  height: 500px;
-  background: #1a1a1a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
+.comic-card {
+  width: 200px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
 }
 
+.comic-card:hover {
+  transform: translateY(-5px);
+}
+
+.comic-card img {
+  width: 100%;
+  display: block;
+}
+
+.comic-card h3 {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
