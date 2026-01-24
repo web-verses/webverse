@@ -1,1 +1,14 @@
+[
+  {
+    "id": "comic1",
+    "title": "Example Comic",
+    "cover": "comics/comic1/cover.jpg",
+    "pages": [
+      "comics/comic1/page1.jpg",
+      "comics/comic1/page2.jpg",
+      "comics/comic1/page3.jpg"
+    ],
+    "genre": "Action"
+  }
+]
 
