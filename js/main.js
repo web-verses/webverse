@@ -1,4 +1,4 @@
-// Load comics from comics.json
+// Load comics dynamically
 fetch('comics.json')
   .then(res => res.json())
   .then(comics => {
@@ -16,5 +16,4 @@ fetch('comics.json')
       list.appendChild(card);
     });
   })
-  .catch(err => console.error('Error loading comics:', err));
-
+  .catch(err => console.error(err));
