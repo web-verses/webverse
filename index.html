@@ -1,37 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WebVerse Comics</title>
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Verse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="#">WEB-VERSE</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Comics</a></li>
+                    <li><a href="#">Genres</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search comics...">
+                <button>Search</button>
+            </div>
+        </div>
+    </header>
 
-<header>
-  <div class="logo">WebVerse</div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Genres</a>
-    <a href="#">Latest</a>
-  </nav>
-</header>
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <div class="hero-image">
+                    <!-- Placeholder for a featured comic image -->
+                    <img src="placeholder-hero.jpg" alt="Featured Comic">
+                </div>
+                <div class="hero-text">
+                    <h2>Read the Latest Adventures!</h2>
+                    <p>Dive into a world of unique stories and captivating artwork. New chapters daily!</p>
+                    <a href="#" class="btn primary-btn">Start Reading</a>
+                </div>
+            </section>
 
-<section class="hero">
-  <h1>Discover Amazing Comics</h1>
-  <p>Scroll through and find your next favorite Webtoon!</p>
-</section>
+            <section class="latest-updates">
+                <h2>Latest Updates</h2>
+                <div class="comic-grid">
+                    <!-- Example Comic Card -->
+                    <div class="comic-card">
+                        <img src="placeholder-comic1.jpg" alt="Comic Title 1">
+                        <h3>Comic Title One</h3>
+                        <p class="chapter-info">Chapter 50 - 2 hours ago</p>
+                        <a href="#" class="btn secondary-btn">Read Now</a>
+                    </div>
+                    <div class="comic-card">
+                        <img src="placeholder-comic2.jpg" alt="Comic Title 2">
+                        <h3>Comic Title Two</h3>
+                        <p class="chapter-info">Chapter 25 - 1 day ago</p>
+                        <a href="#" class="btn secondary-btn">Read Now</a>
+                    </div>
+                    <div class="comic-card">
+                        <img src="placeholder-comic3.jpg" alt="Comic Title 3">
+                        <h3>Comic Title Three</h3>
+                        <p class="chapter-info">Chapter 12 - 3 days ago</p>
+                        <a href="#" class="btn secondary-btn">Read Now</a>
+                    </div>
+                    <!-- More comic cards would go here -->
+                </div>
+            </section>
 
-<main>
-  <h2 class="section-title">Featured Comics</h2>
-  <div id="comic-list" class="comic-grid"></div>
-</main>
+            <section class="popular-comics">
+                <h2>Popular Comics</h2>
+                <div class="comic-grid">
+                    <!-- Example Comic Card -->
+                    <div class="comic-card">
+                        <img src="placeholder-popular1.jpg" alt="Popular Comic 1">
+                        <h3>Popular Comic A</h3>
+                        <p class="chapter-info">150 Chapters</p>
+                        <a href="#" class="btn secondary-btn">View Comic</a>
+                    </div>
+                    <div class="comic-card">
+                        <img src="placeholder-popular2.jpg" alt="Popular Comic 2">
+                        <h3>Popular Comic B</h3>
+                        <p class="chapter-info">100 Chapters</p>
+                        <a href="#" class="btn secondary-btn">View Comic</a>
+                    </div>
+                    <div class="comic-card">
+                        <img src="placeholder-popular3.jpg" alt="Popular Comic 3">
+                        <h3>Popular Comic C</h3>
+                        <p class="chapter-info">80 Chapters</p>
+                        <a href="#" class="btn secondary-btn">View Comic</a>
+                    </div>
+                    <!-- More popular comic cards -->
+                </div>
+            </section>
+        </div>
+    </main>
 
-<footer>
-  <p>© 2026 WebVerse Comics | All rights reserved</p>
-</footer>
-
-<script src="js/main.js"></script>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Web-Verse. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
