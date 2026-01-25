@@ -3,108 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-Verse</title>
+    <title>Web-Verse - Home of Comics</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <div class="container">
-            <h1 class="logo"><a href="#">WEB-VERSE</a></h1>
+            <a href="index.html" class="logo">WEB-VERSE</a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Comics</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#">All Comics</a></li>
                     <li><a href="#">Genres</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <div class="search-bar">
-                <input type="text" placeholder="Search comics...">
-                <button>Search</button>
+                <input type="text" placeholder="Search for a series...">
+                <button type="submit">Search</button>
             </div>
         </div>
     </header>
 
     <main class="main-content">
         <div class="container">
-            <section class="hero-section">
-                <div class="hero-image">
-                    <!-- Placeholder for a featured comic image -->
-                    <img src="placeholder-hero.jpg" alt="Featured Comic">
-                </div>
-                <div class="hero-text">
-                    <h2>Read the Latest Adventures!</h2>
-                    <p>Dive into a world of unique stories and captivating artwork. New chapters daily!</p>
-                    <a href="#" class="btn primary-btn">Start Reading</a>
+            <!-- Featured Comic Section -->
+            <section class="featured-section">
+                <div class="featured-background" style="background-image: url('images/hero-comic.jpg');"></div>
+                <div class="featured-content">
+                    <img src="images/comic-cover-1.jpg" alt="Featured Comic Cover" class="featured-cover">
+                    <div class="featured-info">
+                        <span class="comic-rank">#1 IN ACTION</span>
+                        <h1>The Quantum Ranger</h1>
+                        <p class="featured-summary">When a failed experiment gives high-schooler Alex a gateway to other dimensions, he must become the Quantum Ranger to protect his reality from cosmic threats. New chapter every Friday!</p>
+                        <div class="featured-tags">
+                            <span>Action</span>
+                            <span>Sci-Fi</span>
+                            <span>Adventure</span>
+                        </div>
+                        <a href="comic.html" class="btn primary-btn">Start Reading Now</a>
+                    </div>
                 </div>
             </section>
 
-            <section class="latest-updates">
+            <!-- Latest Updates Section -->
+            <section class="comic-showcase">
                 <h2>Latest Updates</h2>
                 <div class="comic-grid">
-                    <!-- Example Comic Card -->
-                    <div class="comic-card">
-                        <img src="placeholder-comic1.jpg" alt="Comic Title 1">
-                        <h3>Comic Title One</h3>
-                        <p class="chapter-info">Chapter 50 - 2 hours ago</p>
-                        <a href="#" class="btn secondary-btn">Read Now</a>
-                    </div>
-                    <div class="comic-card">
-                        <img src="placeholder-comic2.jpg" alt="Comic Title 2">
-                        <h3>Comic Title Two</h3>
-                        <p class="chapter-info">Chapter 25 - 1 day ago</p>
-                        <a href="#" class="btn secondary-btn">Read Now</a>
-                    </div>
-                    <div class="comic-card">
-                        <img src="placeholder-comic3.jpg" alt="Comic Title 3">
-                        <h3>Comic Title Three</h3>
-                        <p class="chapter-info">Chapter 12 - 3 days ago</p>
-                        <a href="#" class="btn secondary-btn">Read Now</a>
-                    </div>
-                    <!-- More comic cards would go here -->
+                    <!-- Comic Card 1 -->
+                    <a href="comic.html" class="comic-card">
+                        <div class="card-image">
+                            <img src="images/comic-cover-1.jpg" alt="The Quantum Ranger">
+                            <div class="overlay">Chapter 72</div>
+                        </div>
+                        <div class="card-body">
+                            <h3>The Quantum Ranger</h3>
+                            <p class="update-time">2 hours ago</p>
+                        </div>
+                    </a>
+                    <!-- Comic Card 2 -->
+                    <a href="comic.html" class="comic-card">
+                        <div class="card-image">
+                            <img src="images/comic-cover-2.jpg" alt="Arcane Sorcerer">
+                            <div class="overlay">Chapter 105</div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Arcane Sorcerer</h3>
+                            <p class="update-time">8 hours ago</p>
+                        </div>
+                    </a>
+                    <!-- Comic Card 3 -->
+                    <a href="comic.html" class="comic-card">
+                        <div class="card-image">
+                            <img src="images/comic-cover-3.jpg" alt="Blade of the Fallen">
+                            <div class="overlay">Chapter 45</div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Blade of the Fallen</h3>
+                            <p class="update-time">1 day ago</p>
+                        </div>
+                    </a>
+                    <!-- ... Add more comic cards here -->
                 </div>
             </section>
 
-            <section class="popular-comics">
-                <h2>Popular Comics</h2>
-                <div class="comic-grid">
-                    <!-- Example Comic Card -->
-                    <div class="comic-card">
-                        <img src="placeholder-popular1.jpg" alt="Popular Comic 1">
-                        <h3>Popular Comic A</h3>
-                        <p class="chapter-info">150 Chapters</p>
-                        <a href="#" class="btn secondary-btn">View Comic</a>
-                    </div>
-                    <div class="comic-card">
-                        <img src="placeholder-popular2.jpg" alt="Popular Comic 2">
-                        <h3>Popular Comic B</h3>
-                        <p class="chapter-info">100 Chapters</p>
-                        <a href="#" class="btn secondary-btn">View Comic</a>
-                    </div>
-                    <div class="comic-card">
-                        <img src="placeholder-popular3.jpg" alt="Popular Comic 3">
-                        <h3>Popular Comic C</h3>
-                        <p class="chapter-info">80 Chapters</p>
-                        <a href="#" class="btn secondary-btn">View Comic</a>
-                    </div>
-                    <!-- More popular comic cards -->
+            <!-- Popular This Week Section -->
+            <section class="comic-showcase">
+                <h2>Popular This Week</h2>
+                <div class="comic-grid popular-grid">
+                    <!-- Popular Comic 1 -->
+                    <a href="comic.html" class="comic-card popular-card">
+                        <span class="popular-rank">1</span>
+                        <img src="images/comic-cover-4.jpg" alt="Martial God's Return">
+                        <div class="popular-info">
+                            <h4>Martial God's Return</h4>
+                            <p>Action / Fantasy</p>
+                        </div>
+                    </a>
+                     <!-- Popular Comic 2 -->
+                    <a href="comic.html" class="comic-card popular-card">
+                        <span class="popular-rank">2</span>
+                        <img src="images/comic-cover-5.jpg" alt="The Last Necromancer">
+                        <div class="popular-info">
+                            <h4>The Last Necromancer</h4>
+                            <p>Fantasy / Horror</p>
+                        </div>
+                    </a>
+                     <!-- Popular Comic 3 -->
+                    <a href="comic.html" class="comic-card popular-card">
+                        <span class="popular-rank">3</span>
+                        <img src="images/comic-cover-6.jpg" alt="Level-Up King">
+                        <div class="popular-info">
+                            <h4>Level-Up King</h4>
+                            <p>Isekai / Action</p>
+                        </div>
+                    </a>
+                    <!-- ... Add more popular cards -->
                 </div>
             </section>
+
         </div>
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2023 Web-Verse. All rights reserved.</p>
+            <p>&copy; 2026 Web-Verse. All rights reserved.</p>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a> |
+                <a href="#">Contact Us</a>
             </div>
         </div>
     </footer>
+
+</body>
+</html>```
+
+---
+
+### 2. `comic.html` (Comic Detail Page)
+
+This page provides details for a single comic series and lists all its chapters.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quantum Ranger - Web-Verse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">WEB-VERSE</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">All Comics</a></li>
+                    <li><a href="#">Genres</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a series...">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Comic Info Header -->
+        <section class="comic-detail-header">
+            <div class="container">
+                <div class="comic-cover">
+                    <img src="images/comic-cover-1.jpg" alt="The Quantum Ranger Cover">
+                </div>
+                <div class="comic-info">
+                    <h1>The Quantum Ranger</h1>
+                    <div class="info-meta">
+                        <span><strong>Author:</strong> Jane Doe</span>
+                        <span><strong>Artist:</strong> John Smith</span>
+                        <span><strong>Status:</strong> Ongoing</span>
+                    </div>
+                    <div class="info-genres">
+                        <a href="#" class="genre-tag">Action</a>
+                        <a href="#" class="genre-tag">Sci-Fi</a>
+                        <a href="#" class="genre-tag">Adventure</a>
+                        <a href="#" class="genre-tag">Superhero</a>
+                    </div>
+                    <p class="info-summary">
+                        <strong>Summary:</strong> When a failed experiment gives high-schooler Alex a gateway to other dimensions, he must become the Quantum Ranger to protect his reality from cosmic threats. Facing down alien warlords, reality-warping monsters, and the challenges of high school, Alex has to learn fast what it means to be a hero.
+                    </p>
+                    <div class="info-actions">
+                        <a href="chapter.html" class="btn primary-btn">Read First Chapter</a>
+                        <a href="chapter.html" class="btn secondary-btn">Read Latest Chapter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter List Section -->
+        <section class="chapter-list-section">
+            <div class="container">
+                <h2>Chapter List</h2>
+                <div class="chapter-list-container">
+                    <ul class="chapter-list" id="chapter-list">
+                        <!-- Chapters will be dynamically inserted here by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Web-Verse. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
