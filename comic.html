@@ -13,36 +13,14 @@
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">WEB-VERSE</a>
-
-            <!-- Desktop Navigation -->
-            <nav class="main-nav desktop-nav">
+            <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="all-comics.html">All Comics</a></li>
                     <li><a href="genres.html">Genres</a></li>
                 </ul>
             </nav>
-
-            <!-- Search Bar -->
-            <div class="search-bar">
-                <input type="text" placeholder="Search..." onkeydown="if(event.keyCode===13) window.location.href='all-comics.html?search='+this.value">
-                <button type="submit" onclick="window.location.href='all-comics.html?search='+this.previousElementSibling.value">Search</button>
-            </div>
-
-            <!-- Hamburger Menu Button -->
-            <button id="mobile-menu-toggle" class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
-
-        <!-- Mobile Navigation Panel -->
-        <nav id="mobile-nav" class="mobile-nav">
-            <a href="index.html">Home</a>
-            <a href="all-comics.html">All Comics</a>
-            <a href="genres.html">Genres</a>
-        </nav>
     </header>
 
     <main class="main-content" id="comic-detail-main">
