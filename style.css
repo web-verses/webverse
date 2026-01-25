@@ -102,7 +102,6 @@ img { max-width: 100%; display: block; }
 .chapter-nav { display: flex; align-items: center; gap: 10px; }
 .chapter-dropdown { background: var(--tertiary-dark); color: var(--text-light); border: 1px solid var(--border-color); padding: 8px; border-radius: 4px; font-family: 'Roboto'; }
 .nav-btn { padding: 8px 15px; }
-.home-link { display: block; }
 .reader-main { background: #000; text-align: center; }
 .reader-container { max-width: 800px; margin: 0 auto; }
 .reader-container img { margin-bottom: 0; width: 100%; }
@@ -113,83 +112,3 @@ img { max-width: 100%; display: block; }
 .main-footer { background: #0d0d0d; padding: 30px 0; text-align: center; border-top: 2px solid var(--accent-color); color: var(--text-medium); margin-top: 60px; }
 .footer-links a { color: var(--text-medium); transition: color 0.3s; }
 .footer-links a:hover { color: var(--accent-color); }
-
-/* --- GENRES PAGE --- */
-.genre-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-.genre-card { background-color: var(--secondary-dark); border-radius: 8px; padding: 20px; text-align: center; border: 1px solid var(--border-color); transition: all 0.3s ease; }
-.genre-card:hover { transform: translateY(-5px); border-color: var(--accent-color); box-shadow: 0 8px 25px rgba(229, 57, 53, 0.2); }
-.genre-icon { font-size: 3em; line-height: 1; margin-bottom: 15px; }
-.genre-name { font-size: 1.2em; margin: 0; color: var(--text-light); }
-
-/* ================================================================================= */
-/* --- MOBILE NAVIGATION (HAMBURGER MENU) --- */
-/* ================================================================================= */
-
-.mobile-menu-toggle { display: none; flex-direction: column; justify-content: space-around; width: 30px; height: 25px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 2000; }
-.mobile-menu-toggle span { width: 100%; height: 3px; background-color: var(--text-light); border-radius: 5px; transition: all 0.3s ease-in-out; }
-.mobile-menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
-.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-.mobile-nav { display: none; position: fixed; top: 0; left: 100%; width: 70%; max-width: 300px; height: 100vh; background-color: var(--secondary-dark); box-shadow: -5px 0 15px rgba(0,0,0,0.5); z-index: 1500; transition: left 0.3s ease-in-out; padding-top: 100px; }
-.mobile-nav.active { left: 30%; }
-.mobile-nav a { display: block; padding: 20px 30px; color: var(--text-light); font-size: 1.5em; font-family: 'Oswald', sans-serif; text-transform: uppercase; border-bottom: 1px solid var(--border-color); }
-.mobile-nav a:hover { background-color: var(--accent-color); }
-
-/* ================================================================================= */
-/* --- RESPONSIVE DESIGN & MOBILE OPTIMIZATION --- */
-/* ================================================================================= */
-
-@media (max-width: 1024px) {
-    .container { width: 95%; }
-    .featured-content { padding: 30px; gap: 30px; }
-    .featured-cover { width: 200px; }
-    .featured-info h1 { font-size: 2.8em; }
-}
-
-@media (max-width: 768px) {
-    .desktop-nav { display: none; }
-    .mobile-menu-toggle { display: flex; }
-    .mobile-nav { display: block; }
-    .main-header .search-bar { flex-grow: 1; margin: 0 20px; }
-    .main-header .container { flex-direction: row; justify-content: space-between; gap: 0; }
-    .featured-cover { width: 150px; }
-    .featured-info h1 { font-size: 2em; }
-    .featured-summary { font-size: 0.9em; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-    .comic-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px; }
-    .comic-detail-header .container { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
-    .comic-cover img { width: 200px; margin-bottom: 20px; }
-    .info-genres { justify-content: center; }
-    .info-actions { justify-content: center; }
-    .reader-body { padding-top: 80px; }
-    .reader-header .container { flex-direction: column; gap: 10px; padding: 10px 0; }
-    .home-link { display: none; }
-    .reader-footer .container { flex-direction: column; gap: 15px; }
-    .reader-footer .chapter-nav { order: 2; }
-}
-
-@media (max-width: 480px) {
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.5em; }
-    .logo { font-size: 1.5em; }
-    .main-header { padding: 10px 0; }
-    .main-header .search-bar { margin: 0 15px; }
-    .search-bar input, .search-bar button { padding: 6px 10px; }
-    .featured-section { margin-top: 20px; }
-    .featured-content { padding: 20px; }
-    .featured-cover { width: 120px; }
-    .featured-info h1 { font-size: 1.8em; }
-    .comic-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-    .card-image img { height: 180px; }
-    .card-body h3 { font-size: 1em; }
-    .popular-card { gap: 10px; }
-    .popular-rank { font-size: 1.5em; }
-    .popular-info h4 { font-size: 1em; }
-    .genre-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-    .btn { padding: 8px 18px; font-size: 0.9em; }
-    .comic-cover img { width: 150px; }
-    .info-actions { flex-direction: column; align-items: stretch; }
-    .chapter-list li a { padding: 12px 15px; font-size: 0.9em; }
-    .reader-body { padding-top: 110px; }
-    .chapter-dropdown { max-width: 120px; }
-    .nav-btn { padding: 6px 10px; }
-}
