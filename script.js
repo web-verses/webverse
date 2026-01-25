@@ -1,5 +1,3 @@
-// --- SCRIPT.JS ---
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // =================================================================================
@@ -184,13 +182,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const genreGrid = document.getElementById('genre-grid');
         if (!genreGrid) return;
 
-        // Get all unique genres from the data
         const allGenres = [...new Set(comicsData.flatMap(comic => comic.genres))];
         allGenres.sort();
 
         genreGrid.innerHTML = allGenres.map(genre => `
             <a href="all-comics.html?genre=${genre}" class="genre-card">
-                <div class="genre-icon">🔥</div> <!-- Placeholder icon -->
+                <div class="genre-icon">🔥</div>
                 <h3 class="genre-name">${genre}</h3>
             </a>
         `).join('');
@@ -210,5 +207,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${comic.title}</h3>
                 </div>
             </a>`;
+    }
+
+    // =================================================================================
+    // MOBILE MENU TOGGLE
+    // =================================================================================
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
     }
 });
