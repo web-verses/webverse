@@ -1,0 +1,192 @@
+/* --- GENRES PAGE --- */
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.genre-card {
+    background-color: var(--secondary-dark);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 25px rgba(229, 57, 53, 0.2);
+}
+
+.genre-icon {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.genre-name {
+    font-size: 1.2em;
+    margin: 0;
+    color: var(--text-light);
+}
+
+
+/* ================================================================================= */
+/* --- RESPONSIVE DESIGN & MOBILE OPTIMIZATION --- */
+/* ================================================================================= */
+
+/* --- TABLETS (e.g., iPad) --- */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    .featured-content {
+        padding: 30px;
+        gap: 30px;
+    }
+    .featured-cover {
+        width: 200px;
+    }
+    .featured-info h1 {
+        font-size: 2.8em;
+    }
+}
+
+
+/* --- LARGE PHONES & SMALL TABLETS --- */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-nav ul {
+        justify-content: center;
+        width: 100%;
+    }
+    .main-nav li {
+        margin: 0 15px;
+    }
+    .search-bar {
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .search-bar input {
+        width: 100%;
+    }
+
+    .featured-section {
+        min-height: auto;
+    }
+    .featured-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .featured-info h1 {
+        font-size: 2.5em;
+    }
+    .featured-tags {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .comic-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .comic-detail-header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .comic-cover img {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+    .info-genres {
+        justify-content: center;
+    }
+    .info-actions {
+        justify-content: center;
+    }
+    
+    .reader-header .container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .reader-body {
+        padding-top: 120px; /* Adjust for taller mobile header */
+    }
+    .reader-footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .reader-footer .chapter-nav {
+        order: 2;
+    }
+}
+
+
+/* --- STANDARD PHONES --- */
+@media (max-width: 480px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+
+    .main-header {
+        padding: 10px 0;
+    }
+    .main-nav li {
+        margin: 0 8px;
+    }
+    .main-nav a {
+        font-size: 1em;
+    }
+    .logo {
+        font-size: 1.8em;
+    }
+
+    .comic-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .card-image img {
+        height: 200px;
+    }
+    .card-body h3 {
+        font-size: 1em;
+    }
+
+    .popular-card {
+        gap: 10px;
+    }
+    .popular-rank {
+        font-size: 1.5em;
+    }
+    .popular-info h4 {
+        font-size: 1em;
+    }
+    
+    .genre-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+    
+    .reader-body {
+        padding-top: 110px;
+    }
+    .nav-btn {
+        padding: 6px 10px;
+    }
+}
