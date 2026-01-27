@@ -1,40 +1,37 @@
 /* style.css */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    --bg-deep: #0f0c29;
-    --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --primary: #b057ff; /* Neon Purple */
-    --secondary: #00e5ff; /* Cyan */
-    --text-main: #ffffff;
-    --text-muted: #aab0c4;
+    --primary: #ff3b3b; /* Bright Red */
+    --primary-dark: #b30000;
+    --bg-main: #0a0a0a; /* Deep Black */
+    --bg-card: #141414; /* Dark Gray */
+    --text-white: #ffffff;
+    --text-gray: #a1a1a1;
+    --border: #2a2a2a;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: var(--bg-deep);
-    background-image: var(--bg-gradient);
-    background-attachment: fixed;
-    color: var(--text-main);
+    background-color: var(--bg-main);
+    color: var(--text-white);
     min-height: 100vh;
 }
 
-a { text-decoration: none; color: inherit; transition: 0.3s; }
+a { text-decoration: none; color: inherit; transition: 0.2s; }
 ul { list-style: none; }
+img { display: block; width: 100%; }
 
-/* --- Glassmorphic Header --- */
+/* --- Header --- */
 header {
-    background: rgba(15, 12, 41, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: var(--bg-card);
+    border-bottom: 2px solid var(--primary);
     padding: 15px 5%;
     display: flex;
     justify-content: space-between;
@@ -42,153 +39,146 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--glass-border);
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 1px;
-}
-
-.nav-links { display: flex; gap: 30px; font-weight: 600; }
-.nav-links a:hover { color: var(--primary); text-shadow: 0 0 10px rgba(176, 87, 255, 0.4); }
-
-.search-box {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 8px 15px;
-    border-radius: 20px;
-    color: white;
-    outline: none;
-    transition: 0.3s;
-}
-.search-box:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(176, 87, 255, 0.2); }
-
-/* --- Layout Utilities --- */
-.container { max-width: 1400px; margin: 0 auto; padding: 40px 5%; }
-.section-title {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    border-left: 4px solid var(--secondary);
-    padding-left: 15px;
+    color: var(--primary);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.logo span { color: white; }
 
-/* --- Hero Section (Index) --- */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--glass-bg);
-    border-radius: 20px;
-    padding: 40px;
-    margin-bottom: 50px;
-    border: 1px solid var(--glass-border);
-    position: relative;
-    overflow: hidden;
+.nav-links { display: flex; gap: 25px; }
+.nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-white); }
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+/* --- Layout --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+.section-header {
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.hero-content { max-width: 50%; z-index: 2; }
-.hero-tag { color: var(--secondary); font-weight: bold; letter-spacing: 2px; font-size: 0.9rem; }
-.hero h1 { font-size: 3.5rem; line-height: 1.1; margin: 10px 0 20px; background: linear-gradient(to right, #fff, #aab0c4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.hero-desc { color: var(--text-muted); line-height: 1.6; margin-bottom: 30px; }
-.btn-primary {
-    background: linear-gradient(45deg, var(--primary), #8a2be2);
-    padding: 12px 35px;
-    border-radius: 30px;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
-    display: inline-block;
-}
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(138, 43, 226, 0.6); }
-.hero-image img {
-    border-radius: 15px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    transform: rotate(3deg);
-    transition: 0.5s;
-    max-width: 300px;
-}
-.hero:hover .hero-image img { transform: rotate(0deg) scale(1.05); }
-
-/* --- Grids & Cards --- */
+/* --- Grids & Cards (FIXED PROPORTIONS) --- */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
 }
 
 .card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 15px;
+    background: var(--bg-card);
+    border-radius: 6px;
     overflow: hidden;
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    transition: transform 0.2s ease;
+    border: 1px solid var(--border);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+/* THE FIX: Forces images to standard comic poster ratio */
+.card-img-wrapper {
+    width: 100%;
+    aspect-ratio: 2 / 3; 
+    overflow: hidden;
     position: relative;
 }
 
-.card:hover { transform: translateY(-10px); border-color: var(--primary); }
-
-.card-img { width: 100%; height: 280px; overflow: hidden; position: relative; }
-.card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-.card:hover .card-img img { transform: scale(1.1); }
-
-.card-overlay {
-    position: absolute; bottom: 0; left: 0; width: 100%;
-    background: linear-gradient(to top, #0f0c29, transparent);
-    padding: 60px 15px 15px;
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image perfectly to fit container */
 }
 
-.card-info { padding: 15px; }
-.card-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.card-chapter { font-size: 0.85rem; color: var(--secondary); background: rgba(0, 229, 255, 0.1); padding: 4px 10px; border-radius: 8px; display: inline-block; }
+.card-info { padding: 10px; }
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-chap {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --- Hero Section (My Own Comics Showcase) --- */
+.hero {
+    height: 400px;
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(0deg, #0a0a0a 0%, rgba(0,0,0,0) 100%), url('https://placehold.co/1200x600/222/FFF?text=My+Featured+Work');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    padding: 30px;
+    width: 100%;
+    background: linear-gradient(to top, black, transparent);
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; color: white; }
+.btn {
+    background: var(--primary);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover { background: var(--primary-dark); }
 
 /* --- Comic Info Page --- */
-.comic-header-bg {
-    position: relative;
-    padding: 60px 0;
-    overflow: hidden;
-}
-.blur-bg {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-size: cover; filter: blur(30px) brightness(0.4); z-index: -1;
-}
-.comic-flex { display: flex; gap: 50px; align-items: flex-start; z-index: 1; }
-.comic-poster { width: 300px; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.6); }
-.comic-details h1 { font-size: 3rem; margin-bottom: 10px; }
-.meta-tags { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
-.tag { padding: 5px 15px; border-radius: 20px; background: rgba(255,255,255,0.1); font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2); }
-.tag:hover { background: var(--primary); border-color: var(--primary); }
-.synopsis { color: #ddd; line-height: 1.7; margin-bottom: 30px; font-size: 1rem; }
-
-.chapter-list {
-    background: var(--glass-bg);
-    border-radius: 15px;
+.info-box {
+    display: flex;
+    gap: 30px;
+    background: var(--bg-card);
     padding: 20px;
-    border: 1px solid var(--glass-border);
-    max-height: 500px;
-    overflow-y: auto;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
-.chapter-item {
-    display: flex; justify-content: space-between; padding: 15px;
-    border-bottom: 1px solid var(--glass-border); transition: 0.2s;
+.poster-img {
+    width: 220px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
 }
-.chapter-item:hover { background: rgba(255,255,255,0.05); padding-left: 25px; color: var(--secondary); }
+.info-text h1 { margin-bottom: 10px; color: var(--primary); }
+.stats { margin: 15px 0; color: var(--text-gray); font-size: 0.9rem; }
+.stats span { margin-right: 15px; color: white; }
 
 /* --- Reader --- */
-.reader-wrapper { max-width: 800px; margin: 0 auto; text-align: center; }
-.reader-controls { display: flex; justify-content: space-between; margin: 20px 0; background: var(--glass-bg); padding: 15px; border-radius: 10px; }
+.reader-container { max-width: 800px; margin: 0 auto; }
 .reader-img { width: 100%; display: block; }
+.nav-ctrl { display: flex; justify-content: space-between; padding: 20px 0; }
 
 /* --- Mobile --- */
 @media (max-width: 768px) {
-    .hero { flex-direction: column-reverse; text-align: center; }
-    .hero-content { max-width: 100%; margin-top: 20px; }
-    .comic-flex { flex-direction: column; align-items: center; text-align: center; }
-    .nav-links { display: none; } 
-    .grid { grid-template-columns: repeat(2, 1fr); }
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .hero { height: 250px; }
+    .hero h1 { font-size: 1.5rem; }
+    .info-box { flex-direction: column; align-items: center; text-align: center; }
 }
