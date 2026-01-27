@@ -7,34 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <div class="logo"><a href="index.html">WebVerses</a></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="all-comics.html">All Comics</a></li>
-                <li><a href="genres.html">Genres</a></li>
-            </ul>
+        <div class="logo"><a href="index.html">WEBVERSES</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="all-comics.html">Comics</a>
         </nav>
     </header>
 
     <div class="container">
         <h2 class="section-title">All Series</h2>
-        <div style="margin-bottom: 20px;">
-            <button class="nav-btn" style="padding:5px 10px;">Newest</button>
-            <button class="nav-btn" style="padding:5px 10px; background:#333;">A-Z</button>
+        <div style="margin-bottom: 20px; display:flex; gap:10px;">
+            <button class="tag" style="cursor:pointer; background:var(--primary);">Popular</button>
+            <button class="tag" style="cursor:pointer;">Newest</button>
+            <button class="tag" style="cursor:pointer;">Alphabetical</button>
         </div>
-        
-        <div class="comic-grid" id="all-grid">
-            <!-- JS will populate this -->
-        </div>
+        <div class="grid" id="all-grid"></div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 WebVerses. All rights reserved.</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
