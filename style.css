@@ -126,7 +126,7 @@ header {
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    background: linear-gradient(0deg, #0a0a0a 0%, rgba(0,0,0,0) 100%), url(''images/my-banner.jpg'');
+    background: linear-gradient(0deg, #0a0a0a 0%, rgba(0,0,0,0) 100%), url('images/my-banner.jpg');
     background-size: cover;
     background-position: center;
 }
