@@ -3,36 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter Reading - WebVerses</title>
+    <title>Chapter 1 - Web-Verse</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo"><a href="index.html">WEBVERSES</a></div>
-        <div style="color:white; font-weight:600;">Solo Leveling - Ch. 179</div>
-        <a href="comic.html" style="color:var(--secondary);">Back</a>
+        <div class="logo"><a href="index.html">WEB<span>VERSE</span></a></div>
+        <a href="comic.html" style="color:var(--primary); font-weight:600;">Back to Series</a>
     </header>
 
-    <div class="reader-wrapper">
-        <div class="reader-controls">
-            <button style="background:none; border:none; color:white; cursor:pointer;">&larr; Prev</button>
-            <select style="background:#333; color:white; border:none; padding:5px;">
-                <option>Chapter 179</option>
-                <option>Chapter 178</option>
-            </select>
-            <button style="background:none; border:none; color:white; cursor:pointer;">Next &rarr;</button>
+    <div class="reader-container">
+        <div class="nav-ctrl">
+            <button class="btn" style="background:#333;" disabled>Prev</button>
+            <button class="btn">Next</button>
         </div>
 
-        <div id="images">
-            <img src="https://placehold.co/800x1200/111/444?text=Panel+1" class="reader-img">
-            <img src="https://placehold.co/800x1200/111/444?text=Panel+2" class="reader-img">
-            <img src="https://placehold.co/800x1200/111/444?text=Panel+3" class="reader-img">
-            <img src="https://placehold.co/800x1200/111/444?text=Panel+4" class="reader-img">
-        </div>
+        <!-- Comic Pages -->
+        <!-- Important: Images display block to remove gaps -->
+        <img src="https://placehold.co/800x1200/000/333?text=Page+1" class="reader-img">
+        <img src="https://placehold.co/800x1200/000/333?text=Page+2" class="reader-img">
+        <img src="https://placehold.co/800x1200/000/333?text=Page+3" class="reader-img">
 
-        <div class="reader-controls">
-            <a href="#" class="btn-primary" style="padding:10px 20px; font-size:0.8rem;">Next Chapter</a>
+        <div class="nav-ctrl">
+            <button class="btn" style="background:#333;" disabled>Prev</button>
+            <button class="btn">Next</button>
         </div>
     </div>
 
