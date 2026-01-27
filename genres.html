@@ -7,41 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <div class="logo"><a href="index.html">WebVerses</a></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="all-comics.html">All Comics</a></li>
-                <li><a href="genres.html">Genres</a></li>
-            </ul>
+        <div class="logo"><a href="index.html">WEBVERSES</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="all-comics.html">Comics</a>
         </nav>
     </header>
 
     <div class="container">
-        <h2 class="section-title">Search by Genre</h2>
-        
-        <div class="genre-list">
-            <a href="#" class="genre-tag">Action</a>
-            <a href="#" class="genre-tag">Adventure</a>
-            <a href="#" class="genre-tag">Fantasy</a>
-            <a href="#" class="genre-tag">Isekai</a>
-            <a href="#" class="genre-tag">Romance</a>
-            <a href="#" class="genre-tag">Martial Arts</a>
-            <a href="#" class="genre-tag">System</a>
+        <h2 class="section-title">Browse by Genre</h2>
+        <div class="meta-tags" style="justify-content:center; margin-bottom:50px;">
+            <a href="#" class="tag">Action</a>
+            <a href="#" class="tag">Adventure</a>
+            <a href="#" class="tag">Dungeon</a>
+            <a href="#" class="tag">Fantasy</a>
+            <a href="#" class="tag">Isekai</a>
+            <a href="#" class="tag">Murim</a>
+            <a href="#" class="tag">Regression</a>
+            <a href="#" class="tag">Romance</a>
+            <a href="#" class="tag">Sci-Fi</a>
+            <a href="#" class="tag">System</a>
         </div>
 
-        <h2 class="section-title">Popular in Action</h2>
-        <div class="comic-grid" id="genre-grid">
-            <!-- JS will populate this -->
-        </div>
+        <h2 class="section-title">Top Fantasy</h2>
+        <div class="grid" id="genre-grid"></div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 WebVerses. All rights reserved.</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
