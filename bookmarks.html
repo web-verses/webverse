@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library - Web-Verse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="logo"><a href="index.html">WEB<span>VERSE</span></a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="bookmarks.html" class="active">Bookmarks</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="section-header">Saved Comics</div>
+        
+        <!-- Grid for saved items -->
+        <div class="grid" id="bookmarks-grid">
+            <!-- JS will inject saved comics here -->
+        </div>
+        
+        <div id="empty-msg" style="text-align:center; color:#555; display:none; margin-top:50px;">
+            <h2>No bookmarks yet.</h2>
+            <p>Go read some comics and click "Add to Library"!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Specific script to load bookmarks
+        document.addEventListener('DOMContentLoaded', loadBookmarksPage);
+    </script>
+</body>
+</html>
