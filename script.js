@@ -1,49 +1,97 @@
 /* script.js */
 
-const comics = [
-    { title: "Solo Leveling", ch: "179", img: "https://placehold.co/300x400/2b2b2b/FFF?text=SL" },
-    { title: "The Beginning After The End", ch: "175", img: "https://placehold.co/300x400/2b2b2b/FFF?text=TBATE" },
-    { title: "Omniscient Reader", ch: "209", img: "https://placehold.co/300x400/2b2b2b/FFF?text=ORV" },
-    { title: "Nano Machine", ch: "140", img: "https://placehold.co/300x400/2b2b2b/FFF?text=Nano" },
-    { title: "Return of the Mount Hua Sect", ch: "72", img: "https://placehold.co/300x400/2b2b2b/FFF?text=Mt+Hua" },
-    { title: "SSS-Class Suicide Hunter", ch: "90", img: "https://placehold.co/300x400/2b2b2b/FFF?text=SSS+Hunter" },
-    { title: "Overgeared", ch: "180", img: "https://placehold.co/300x400/2b2b2b/FFF?text=Overgeared" },
-    { title: "Tower of God", ch: "550", img: "https://placehold.co/300x400/2b2b2b/FFF?text=TOG" },
+// 1. Data for "My Works" (Index Page)
+const myComics = [
+    { title: "The Red Slayer", chapter: "Ch. 3", img: "https://placehold.co/300x450/1a1a1a/ff3b3b?text=Red+Slayer", url: "comic.html" },
+    { title: "Void Walker", chapter: "Ch. 10", img: "https://placehold.co/300x450/1a1a1a/4444ff?text=Void", url: "comic.html" },
+    { title: "Cyber Ronin", chapter: "Ch. 1", img: "https://placehold.co/300x450/1a1a1a/00ff00?text=Ronin", url: "comic.html" },
+    { title: "Abyss King", chapter: "Ch. 5", img: "https://placehold.co/300x450/1a1a1a/purple?text=Abyss", url: "comic.html" },
+    { title: "Shadowless", chapter: "Ch. 20", img: "https://placehold.co/300x450/1a1a1a/orange?text=Shadow", url: "comic.html" }
 ];
 
-// Card Template
-function getCard(comic) {
-    return `
-    <div class="card">
-        <a href="comic.html">
-            <div class="card-img">
-                <img src="${comic.img}" alt="${comic.title}">
-                <div class="card-overlay">
-                    <div class="card-title">${comic.title}</div>
-                    <span class="card-chapter">Chapter ${comic.ch}</span>
+// 2. Generate Grid Cards
+function renderGrid(data, elementId) {
+    const container = document.getElementById(elementId);
+    if (!container) return;
+
+    container.innerHTML = data.map(comic => `
+        <div class="card">
+            <a href="${comic.url}">
+                <div class="card-img-wrapper">
+                    <img src="${comic.img}" alt="${comic.title}">
                 </div>
-            </div>
-        </a>
-    </div>
-    `;
+                <div class="card-info">
+                    <div class="card-title">${comic.title}</div>
+                    <div class="card-chap">
+                        <span>${comic.chapter}</span>
+                        <span>Update</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    `).join('');
 }
 
-// Render Functions
-function render(id, count) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    
-    // Duplicate data to fill grid if needed
-    const data = count > comics.length 
-        ? [...comics, ...comics].slice(0, count) 
-        : comics.slice(0, count);
+// 3. BOOKMARK LOGIC
+function toggleBookmark() {
+    const title = document.getElementById('comic-title').innerText;
+    const img = document.getElementById('comic-cover').src;
+    const url = window.location.href; // Save current page URL
 
-    el.innerHTML = data.map(c => getCard(c)).join('');
+    // Get current library
+    let library = JSON.parse(localStorage.getItem('webverse_library')) || [];
+
+    // Check if exists
+    const index = library.findIndex(item => item.title === title);
+
+    if (index === -1) {
+        // Add to library
+        library.push({ title, img, url, chapter: "Saved" });
+        localStorage.setItem('webverse_library', JSON.stringify(library));
+        updateBtn(true);
+    } else {
+        // Remove from library
+        library.splice(index, 1);
+        localStorage.setItem('webverse_library', JSON.stringify(library));
+        updateBtn(false);
+    }
 }
 
-// Init
+function checkBookmarkStatus(title) {
+    let library = JSON.parse(localStorage.getItem('webverse_library')) || [];
+    const exists = library.some(item => item.title === title);
+    updateBtn(exists);
+}
+
+function updateBtn(isSaved) {
+    const btn = document.getElementById('bookmark-btn');
+    const txt = document.getElementById('btn-text');
+    if (!btn) return;
+
+    if (isSaved) {
+        btn.style.background = "#ff3b3b"; // Red
+        txt.innerText = "Saved in Library";
+    } else {
+        btn.style.background = "#333"; // Dark
+        txt.innerText = "Add to Library";
+    }
+}
+
+function loadBookmarksPage() {
+    let library = JSON.parse(localStorage.getItem('webverse_library')) || [];
+    const container = document.getElementById('bookmarks-grid');
+    const emptyMsg = document.getElementById('empty-msg');
+
+    if (library.length === 0) {
+        emptyMsg.style.display = 'block';
+    } else {
+        renderGrid(library, 'bookmarks-grid');
+    }
+}
+
+// 4. Initialize Index Page
 document.addEventListener('DOMContentLoaded', () => {
-    render('latest-grid', 8); // Home
-    render('all-grid', 12);   // All Comics
-    render('genre-grid', 6);  // Genres
+    if (document.getElementById('comic-grid')) {
+        renderGrid(myComics, 'comic-grid');
+    }
 });
