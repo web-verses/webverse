@@ -3,45 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reader - Web-Verse</title> <!-- Title will be updated by JS -->
+    <title>Chapter 1 - Solo Leveling - WebVerses</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body class="reader-body">
-    <header class="reader-header">
-        <div class="container">
-            <a href="comic.html" id="reader-comic-link" class="comic-title-link">Comic Title</a>
-            <div class="chapter-nav">
-                <a href="#" class="btn secondary-btn nav-btn">&laquo; Prev</a>
-                <select id="chapter-select" class="chapter-dropdown"></select>
-                <a href="#" class="btn secondary-btn nav-btn">Next &raquo;</a>
-            </div>
-            <a href="index.html" class="home-link">Home</a>
-        </div>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">WebVerses</a></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="all-comics.html">All Comics</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="reader-main">
-        <div class="reader-container" id="reader-panels">
-            <!-- Using placeholders for comic panels -->
-            <img src="https://placehold.co/800x1200/000000/FFFFFF?text=Panel+1" alt="Comic Panel 1">
-            <img src="https://placehold.co/800x1350/000000/FFFFFF?text=Panel+2" alt="Comic Panel 2">
-            <img src="https://placehold.co/800x1150/000000/FFFFFF?text=Panel+3" alt="Comic Panel 3">
-            <img src="https://placehold.co/800x1500/000000/FFFFFF?text=Panel+4" alt="Comic Panel 4">
+    <div class="reader-container">
+        <!-- Breadcrumb -->
+        <div style="margin: 20px 0; text-align: left; color: #aaa;">
+            <a href="index.html">Home</a> > <span style="color: white;">Solo Leveling</span> > <span style="color: var(--accent-color);">Chapter 1</span>
         </div>
-    </main>
 
-    <footer class="reader-footer">
-        <div class="container">
-            <div class="chapter-nav">
-                 <a href="#" class="btn secondary-btn nav-btn">&laquo; Prev Chapter</a>
-                 <a href="comic.html" id="reader-back-link" class="btn secondary-btn">Back to Series</a>
-                 <a href="#" class="btn secondary-btn nav-btn">Next Chapter &raquo;</a>
-            </div>
+        <!-- Top Nav -->
+        <div class="chapter-nav">
+            <a href="#" class="nav-btn" style="opacity: 0.5;">Prev</a>
+            <select style="background: #333; color: white; padding: 10px; border:none;">
+                <option>Chapter 1</option>
+                <option>Chapter 2</option>
+                <option>Chapter 3</option>
+            </select>
+            <a href="#" class="nav-btn">Next</a>
         </div>
+
+        <!-- Images -->
+        <div class="reader-images">
+            <!-- Placeholders for comic strips -->
+            <img src="https://placehold.co/800x1200/121212/333333?text=Panel+1" alt="Page 1">
+            <img src="https://placehold.co/800x1200/121212/333333?text=Panel+2" alt="Page 2">
+            <img src="https://placehold.co/800x1200/121212/333333?text=Panel+3" alt="Page 3">
+            <img src="https://placehold.co/800x600/121212/333333?text=End+of+Chapter" alt="End">
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="chapter-nav">
+            <a href="#" class="nav-btn" style="opacity: 0.5;">Prev</a>
+            <a href="#" class="nav-btn">Next</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 WebVerses. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
