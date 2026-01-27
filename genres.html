@@ -3,56 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genres - Web-Verse</title>
+    <title>Genres - WebVerses</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="logo">WEB-VERSE</a>
-            <nav class="main-nav desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="all-comics.html">All Comics</a></li>
-                    <li><a href="genres.html" class="active">Genres</a></li>
-                </ul>
-            </nav>
-            <div class="search-bar">
-                <input type="text" placeholder="Search..." onkeydown="if(event.keyCode===13) window.location.href='all-comics.html?search='+this.value">
-                <button type="submit" onclick="window.location.href='all-comics.html?search='+this.previousElementSibling.value">Search</button>
-            </div>
-            <button id="mobile-menu-toggle" class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <nav id="mobile-nav" class="mobile-nav">
-            <a href="index.html">Home</a>
-            <a href="all-comics.html">All Comics</a>
-            <a href="genres.html">Genres</a>
+
+    <header>
+        <div class="logo"><a href="index.html">WebVerses</a></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="all-comics.html">All Comics</a></li>
+                <li><a href="genres.html">Genres</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="main-content">
-        <div class="container">
-            <section class="comic-showcase">
-                <h2>Browse By Genre</h2>
-                <div id="genre-grid" class="genre-grid"></div>
-            </section>
+    <div class="container">
+        <h2 class="section-title">Search by Genre</h2>
+        
+        <div class="genre-list">
+            <a href="#" class="genre-tag">Action</a>
+            <a href="#" class="genre-tag">Adventure</a>
+            <a href="#" class="genre-tag">Fantasy</a>
+            <a href="#" class="genre-tag">Isekai</a>
+            <a href="#" class="genre-tag">Romance</a>
+            <a href="#" class="genre-tag">Martial Arts</a>
+            <a href="#" class="genre-tag">System</a>
         </div>
-    </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2026 Web-Verse. All rights reserved.</p>
+        <h2 class="section-title">Popular in Action</h2>
+        <div class="comic-grid" id="genre-grid">
+            <!-- JS will populate this -->
         </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 WebVerses. All rights reserved.</p>
     </footer>
 
-    <a href="#" id="back-to-top" class="back-to-top-btn">▲</a>
     <script src="script.js"></script>
 </body>
 </html>
