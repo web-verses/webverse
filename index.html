@@ -3,42 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebVerses - Read Webtoons Online</title>
+    <title>WebVerses | Next Gen Webtoons</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo"><a href="index.html">WebVerses</a></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="all-comics.html">All Comics</a></li>
-                <li><a href="genres.html">Genres</a></li>
-            </ul>
+        <div class="logo"><a href="index.html">WEBVERSES</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="all-comics.html">Comics</a>
+            <a href="genres.html">Genres</a>
+            <a href="#">Bookmarks</a>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
+        <input type="text" class="search-box" placeholder="Search Series...">
     </header>
 
     <div class="container">
-        <!-- Hero / Featured Section -->
-        <h2 class="section-title">Weekly Hot</h2>
-        <div class="comic-grid" id="featured-grid">
-            <!-- Content injected via JS -->
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <span class="hero-tag">#1 TRENDING THIS WEEK</span>
+                <h1>Solo Leveling: Ragnarok</h1>
+                <p class="hero-desc">The son of the Shadow Monarch begins his own journey. A world where dungeons and hunters coexist, but a new threat emerges from the void.</p>
+                <a href="comic.html" class="btn-primary">Read Now</a>
+            </div>
+            <div class="hero-image">
+                <!-- Using placeholder image -->
+                <img src="https://placehold.co/400x600/1a1a2e/FFF?text=SL:Ragnarok" alt="Solo Leveling">
+            </div>
         </div>
 
         <!-- Latest Updates -->
         <h2 class="section-title">Latest Updates</h2>
-        <div class="comic-grid" id="latest-grid">
-            <!-- Content injected via JS -->
+        <div class="grid" id="latest-grid">
+            <!-- Injected by JS -->
         </div>
-    </div>
 
-    <footer>
-        <p>&copy; 2024 WebVerses. All rights reserved.</p>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
