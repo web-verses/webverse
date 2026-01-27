@@ -3,44 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebVerses | Next Gen Webtoons</title>
+    <title>Web-Verse | My Comics</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo"><a href="index.html">WEBVERSES</a></div>
+        <div class="logo"><a href="index.html">WEB<span>VERSE</span></a></div>
         <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="all-comics.html">Comics</a>
-            <a href="genres.html">Genres</a>
-            <a href="#">Bookmarks</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="bookmarks.html">Bookmarks</a>
         </nav>
-        <input type="text" class="search-box" placeholder="Search Series...">
     </header>
 
     <div class="container">
-        
-        <!-- Hero Section -->
+        <!-- Hero: Your Main Comic -->
         <div class="hero">
             <div class="hero-content">
-                <span class="hero-tag">#1 TRENDING THIS WEEK</span>
-                <h1>Solo Leveling: Ragnarok</h1>
-                <p class="hero-desc">The son of the Shadow Monarch begins his own journey. A world where dungeons and hunters coexist, but a new threat emerges from the void.</p>
-                <a href="comic.html" class="btn-primary">Read Now</a>
-            </div>
-            <div class="hero-image">
-                <!-- Using placeholder image -->
-                <img src="https://placehold.co/400x600/1a1a2e/FFF?text=SL:Ragnarok" alt="Solo Leveling">
+                <span style="color:var(--primary); font-weight:bold;">LATEST RELEASE</span>
+                <h1>The Red Slayer</h1>
+                <p style="color:#ccc; margin-bottom:15px; max-width:600px;">
+                    My newest original series. A hunter enters the void to find his lost memories.
+                </p>
+                <a href="comic.html" class="btn">Read Now</a>
             </div>
         </div>
 
-        <!-- Latest Updates -->
-        <h2 class="section-title">Latest Updates</h2>
-        <div class="grid" id="latest-grid">
-            <!-- Injected by JS -->
+        <!-- Grid: Your Works -->
+        <div class="section-header">My Works</div>
+        <div class="grid" id="comic-grid">
+            <!-- JS will fill this, or you can hardcode cards here -->
         </div>
-
     </div>
 
     <script src="script.js"></script>
