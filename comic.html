@@ -5,103 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solo Leveling - WebVerses</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for Icons (Optional) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="logo"><a href="index.html">WebVerses</a></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="all-comics.html">All Comics</a></li>
-                <li><a href="genres.html">Genres</a></li>
-            </ul>
+        <div class="logo"><a href="index.html">WEBVERSES</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="all-comics.html">Comics</a>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
+        <input type="text" class="search-box" placeholder="Search...">
     </header>
 
-    <!-- Series Header / Info -->
-    <div class="series-header">
-        <div class="container series-flex">
-            <!-- Cover Image -->
-            <div class="series-cover">
-                <img src="https://placehold.co/300x400/2b2b2b/FFF?text=Solo+Leveling" alt="Cover">
-            </div>
-
-            <!-- Info Text -->
-            <div class="series-info">
-                <div class="series-badge">Ongoing</div>
-                <h1 class="series-title">Solo Leveling</h1>
-                <div class="series-meta">
-                    <span><i class="fas fa-star" style="color: gold;"></i> 9.8</span>
-                    <span><i class="fas fa-user"></i> Chugong</span>
-                    <span><i class="fas fa-clock"></i> Updated 2 hours ago</span>
+    <!-- Info Section with Blurry BG -->
+    <div class="comic-header-bg">
+        <div class="blur-bg" style="background-image: url('https://placehold.co/800x600/1a1a2e/FFF?text=BG');"></div>
+        <div class="container comic-flex">
+            <img src="https://placehold.co/400x600/1a1a2e/FFF?text=Cover+Art" class="comic-poster">
+            <div class="comic-details">
+                <div style="color:var(--secondary); font-weight:bold; margin-bottom:10px;">ONGOING • UPDATED TODAY</div>
+                <h1>Solo Leveling</h1>
+                <div class="meta-tags">
+                    <span class="tag">Action</span>
+                    <span class="tag">Fantasy</span>
+                    <span class="tag">System</span>
+                    <span class="tag">⭐ 9.9</span>
                 </div>
-                
-                <div class="genre-list" style="margin: 15px 0;">
-                    <a href="#" class="genre-tag">Action</a>
-                    <a href="#" class="genre-tag">Adventure</a>
-                    <a href="#" class="genre-tag">Fantasy</a>
-                </div>
-
-                <p class="series-synopsis">
-                    <strong>Synopsis:</strong><br>
-                    In a world where hunters, humans who possess magical abilities, must battle deadly monsters to protect the human race from certain annihilation, a notoriously weak hunter named Sung Jinwoo finds himself in a seemingly endless struggle for survival. One day, after narrowly surviving an overwhelmingly powerful double dungeon that nearly wipes out his entire party, a mysterious program called the System selects him as its sole player and in turn, gives him the extremely rare ability to level up in strength, possibly beyond any known limits.
+                <p class="synopsis">
+                    In a world where hunters, humans who possess magical abilities, must battle deadly monsters to protect the human race from certain annihilation, a notoriously weak hunter named Sung Jinwoo finds himself in a seemingly endless struggle for survival.
                 </p>
-
-                <div class="action-buttons">
-                    <a href="chapter.html" class="read-btn">Read First</a>
-                    <a href="chapter.html" class="read-btn" style="background: #333;">Read Last</a>
+                <div style="margin-top: 30px;">
+                    <a href="chapter.html" class="btn-primary">Read First Chapter</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Chapter List Section -->
     <div class="container">
-        <h2 class="section-title">Chapter List</h2>
-        
-        <div class="chapter-list-container">
-            <!-- Search within chapters -->
-            <div style="margin-bottom: 15px;">
-                <input type="text" placeholder="Find Chapter..." style="padding: 10px; border-radius: 5px; border:none; background: #333; color: white; width: 100%; max-width: 300px;">
-            </div>
-
-            <ul class="chapter-ul">
-                <!-- Example Static Chapter Items -->
-                <li>
-                    <a href="chapter.html">
-                        <span class="chap-num">Chapter 179</span>
-                        <span class="chap-date">May 20, 2024</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="chapter.html">
-                        <span class="chap-num">Chapter 178</span>
-                        <span class="chap-date">May 13, 2024</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="chapter.html">
-                        <span class="chap-num">Chapter 177</span>
-                        <span class="chap-date">May 06, 2024</span>
-                    </a>
-                </li>
-                <!-- Usually generated by JS, but hardcoded here for demo -->
-                <li><a href="chapter.html"><span class="chap-num">Chapter 176</span><span class="chap-date">Apr 29, 2024</span></a></li>
-                <li><a href="chapter.html"><span class="chap-num">Chapter 175</span><span class="chap-date">Apr 22, 2024</span></a></li>
-                <li><a href="chapter.html"><span class="chap-num">Chapter 174</span><span class="chap-date">Apr 15, 2024</span></a></li>
-            </ul>
+        <h2 class="section-title">Chapters</h2>
+        <div class="chapter-list">
+            <!-- Example Static List -->
+            <a href="chapter.html" class="chapter-item">
+                <span>Chapter 179</span>
+                <span style="color:#aaa">May 20, 2025</span>
+            </a>
+            <a href="chapter.html" class="chapter-item">
+                <span>Chapter 178</span>
+                <span style="color:#aaa">May 13, 2025</span>
+            </a>
+            <a href="chapter.html" class="chapter-item">
+                <span>Chapter 177</span>
+                <span style="color:#aaa">May 06, 2025</span>
+            </a>
+             <a href="chapter.html" class="chapter-item">
+                <span>Chapter 176</span>
+                <span style="color:#aaa">Apr 29, 2025</span>
+            </a>
+             <a href="chapter.html" class="chapter-item">
+                <span>Chapter 175</span>
+                <span style="color:#aaa">Apr 22, 2025</span>
+            </a>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 WebVerses. All rights reserved.</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
