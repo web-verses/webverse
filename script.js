@@ -2,7 +2,7 @@
 
 // 1. Data for "My Works" (Index Page)
 const myComics = [
-    { title: "The Red Slayer", chapter: "Ch. 3", img: "https://placehold.co/300x450/1a1a1a/ff3b3b?text=Red+Slayer", url: "comic.html" },
+    { title: "I'm The Strongest One", chapter: "Ch. 3", img: "https://placehold.co/300x450/1a1a1a/ff3b3b?text=Red+Slayer", url: "comic.html" },
     { title: "War For Eternity", chapter: "Ch. 10", img: "images/my-banner.jpg" },
     { title: "Cyber Ronin", chapter: "Ch. 1", img: "https://placehold.co/300x450/1a1a1a/00ff00?text=Ronin", url: "comic.html" },
     { title: "Abyss King", chapter: "Ch. 5", img: "https://placehold.co/300x450/1a1a1a/purple?text=Abyss", url: "comic.html" },
