@@ -3,57 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 1 - Solo Leveling - WebVerses</title>
+    <title>Chapter Reading - WebVerses</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo"><a href="index.html">WebVerses</a></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="all-comics.html">All Comics</a></li>
-            </ul>
-        </nav>
+        <div class="logo"><a href="index.html">WEBVERSES</a></div>
+        <div style="color:white; font-weight:600;">Solo Leveling - Ch. 179</div>
+        <a href="comic.html" style="color:var(--secondary);">Back</a>
     </header>
 
-    <div class="reader-container">
-        <!-- Breadcrumb -->
-        <div style="margin: 20px 0; text-align: left; color: #aaa;">
-            <a href="index.html">Home</a> > <span style="color: white;">Solo Leveling</span> > <span style="color: var(--accent-color);">Chapter 1</span>
-        </div>
-
-        <!-- Top Nav -->
-        <div class="chapter-nav">
-            <a href="#" class="nav-btn" style="opacity: 0.5;">Prev</a>
-            <select style="background: #333; color: white; padding: 10px; border:none;">
-                <option>Chapter 1</option>
-                <option>Chapter 2</option>
-                <option>Chapter 3</option>
+    <div class="reader-wrapper">
+        <div class="reader-controls">
+            <button style="background:none; border:none; color:white; cursor:pointer;">&larr; Prev</button>
+            <select style="background:#333; color:white; border:none; padding:5px;">
+                <option>Chapter 179</option>
+                <option>Chapter 178</option>
             </select>
-            <a href="#" class="nav-btn">Next</a>
+            <button style="background:none; border:none; color:white; cursor:pointer;">Next &rarr;</button>
         </div>
 
-        <!-- Images -->
-        <div class="reader-images">
-            <!-- Placeholders for comic strips -->
-            <img src="https://placehold.co/800x1200/121212/333333?text=Panel+1" alt="Page 1">
-            <img src="https://placehold.co/800x1200/121212/333333?text=Panel+2" alt="Page 2">
-            <img src="https://placehold.co/800x1200/121212/333333?text=Panel+3" alt="Page 3">
-            <img src="https://placehold.co/800x600/121212/333333?text=End+of+Chapter" alt="End">
+        <div id="images">
+            <img src="https://placehold.co/800x1200/111/444?text=Panel+1" class="reader-img">
+            <img src="https://placehold.co/800x1200/111/444?text=Panel+2" class="reader-img">
+            <img src="https://placehold.co/800x1200/111/444?text=Panel+3" class="reader-img">
+            <img src="https://placehold.co/800x1200/111/444?text=Panel+4" class="reader-img">
         </div>
 
-        <!-- Bottom Nav -->
-        <div class="chapter-nav">
-            <a href="#" class="nav-btn" style="opacity: 0.5;">Prev</a>
-            <a href="#" class="nav-btn">Next</a>
+        <div class="reader-controls">
+            <a href="#" class="btn-primary" style="padding:10px 20px; font-size:0.8rem;">Next Chapter</a>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 WebVerses. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
