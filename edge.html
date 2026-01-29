@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Of Death - Web-Verse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">WEB<span>VERSE</span></a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="bookmarks.html">Bookmarks</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Series Details -->
+        <div class="info-box">
+            <!-- ID used for JS to identify comic -->
+            <img src="images/edge.jpg" class="poster-img" id="comic-cover">
+            
+            <div class="info-text">
+                <h1 id="comic-title">Edge Of Death</h1>
+                <div class="stats">
+                    <span><i class="fas fa-user"></i> Author: tai</span>
+                    <span><i class="fas fa-layer-group"></i> Status: Ongoing</span>
+                </div>
+                <div style="margin-bottom: 20px; line-height: 1.6; color: #ccc;">
+                    Blair's apocolapse survival guide.
+                </div>
+                
+                <div style="display:flex; gap:10px;">
+                    <a href="warchapter.html" class="btn">Read First Chapter</a>
+                    <!-- BOOKMARK BUTTON -->
+                    <button id="bookmark-btn" class="btn" style="background:#333;" onclick="toggleBookmark()">
+                        <span id="btn-text">Add to Library</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">Chapters</div>
+        <div style="background:var(--bg-card); padding:10px; border-radius:5px;">
+            <ul style="display:flex; flex-direction:column; gap:1px;">
+                <!-- Link to Reader -->
+                <li style="padding:15px; border-bottom:1px solid #222;">
+                    <a href="chapter.html" style="display:flex; justify-content:space-between;">
+                        <span>Chapter 3</span> <span style="color:#555;">Today</span>
+                    </a>
+                </li>
+                <li style="padding:15px; border-bottom:1px solid #222;">
+                    <a href="chapter.html" style="display:flex; justify-content:space-between;">
+                        <span>Chapter 2</span> <span style="color:#555;">Yesterday</span>
+                    </a>
+                </li>
+                <li style="padding:15px;">
+                    <a href="chapter.html" style="display:flex; justify-content:space-between;">
+                        <span>Chapter 1</span> <span style="color:#555;">Last Week</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Check if already bookmarked on load
+        document.addEventListener('DOMContentLoaded', () => {
+            checkBookmarkStatus("Edge Of Death");
+        });
+    </script>
+</body>
+</html>
